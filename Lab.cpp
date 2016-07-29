@@ -3,17 +3,34 @@
 using namespace std;
  int Factorial(int);
  void BuscandoNumero(int);
+ int BuscarDivisores(int);
+
 
  int main (){
 	int Opcion=0;
-	cout<<"Ejercicio 1:1"<<"\n"<<"Ejercicio 2:2"<<"\n"<<"Ingrese su pcion";
+	cout<<"Ejercicio 1:1"<<"\n"<<"Ejercicio 2:2"<<"\n"<<"Ingrese su opcion";
 	cin>>Opcion;
 	if(Opcion==1){
 	for(int i=1;i<=50000;i++){
 	BuscandoNumero(i);
 	}
 	}if(Opcion==2){
-			
+	int Numero1=0;
+	int Numero2=0;
+	int A=0,B=0;
+	cout<<"Ingrese el primer numero: ";
+	cin>>Numero1;
+	cout<<"\n";
+	cout<<"Ingrese el segundo numero:";
+	cin>>Numero2;
+//	cout<<"\n";
+	A=BuscarDivisores(Numero1);
+	B=BuscarDivisores(Numero2);
+	if(A==Numero2&&B==Numero1){
+	cout<<"Los numeros son amigos";
+	}else{
+	cout<<"Los numeros no son amigos";
+	}		
 	}else{
 	cout<<"Ingreso una opcion incorrecta";
 
@@ -55,6 +72,16 @@ using namespace std;
         }
 }
 
+ int BuscarDivisores(int NumeroX){
+	int SumaDivisores=0;
+	for(int i=1;i<NumeroX;i++ ){
+	if(NumeroX%i==0){
+		SumaDivisores=SumaDivisores+i;
+	}
+	}
+	cout<<SumaDivisores<<"\n";
+	return SumaDivisores;
+}
 	  		
 	
 
