@@ -5,12 +5,23 @@ using namespace std;
  void BuscandoNumero(int);
 
  int main (){
+	int Opcion=0;
+	cout<<"Ejercicio 1:1"<<"\n"<<"Ejercicio 2:2"<<"\n"<<"Ingrese su pcion";
+	cin>>Opcion;
+	if(Opcion==1){
 	for(int i=1;i<=50000;i++){
 	BuscandoNumero(i);
+	}
+	}if(Opcion==2){
+			
+	}else{
+	cout<<"Ingreso una opcion incorrecta";
+
 	}
 	return 99;
  
 }
+
 
  int Factorial(int NumeroA){
 	int Acumulador=1;
